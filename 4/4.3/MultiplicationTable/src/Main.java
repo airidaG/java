@@ -12,14 +12,15 @@ public class Main {
         for (int line = 1; line <= 48; line++) {
             System.out.print("-");
         }
-        System.out.println();
 
+        System.out.println();
 
         for (int row = 1; row <= 9; row++) {
             for (int coll = 1; coll <= 9; coll++) {
                 if (coll == 1) {
                     System.out.print(row + " | ");
                 }
+                
                 if (row * coll < 10) {
                     System.out.print("  " + row * coll + "  ");
                 } else {
@@ -29,7 +30,6 @@ public class Main {
                 if (coll == 9) {
                     System.out.println();
                 }
-
             }
         }
     }
