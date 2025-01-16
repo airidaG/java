@@ -19,7 +19,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.name + ", has a friend called " + Pet.getName() + " (" + Pet.getBreed() + ")";
+        return this.name + ", has a friend called " + pet.getName() + " (" + pet.getBreed() + ")";
     }
 
 }
