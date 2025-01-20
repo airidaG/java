@@ -14,5 +14,7 @@ public class SavingAccount extends Account {
             setBalance(getBalance() - amount);
             System.out.println("Withdraw successful!");
         }
+        Transaction newTransaction = new Transaction('w', amount, getBalance(), "Withdrawal");
+        getTransactions().add(newTransaction);
     }
 }

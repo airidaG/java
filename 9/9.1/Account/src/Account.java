@@ -39,6 +39,9 @@ public class Account {
         return balance;
     }
 
+    public ArrayList<Transaction> getTransactions() {
+        return transactions;
+    }
 
     public double getAnnualInterestRate() {
         return annualInterestRate;
@@ -79,23 +82,36 @@ public class Account {
 
     public void withdraw(double amount) {
 
-        Transaction newTransaction = new Transaction(w, )
-
         balance -= amount;
+
+        Transaction newTransaction = new Transaction('w', amount, balance, "Withdrawal");
+        transactions.add(newTransaction);
+
     }
 
 
     public void deposit(double amount) {
 
         balance += amount;
+
+        Transaction newTransaction = new Transaction('d', amount, balance, "Deposit");
+        transactions.add(newTransaction);
     }
 
     @Override
     public String toString() {
         return "Account " +
-                "id: " + id +
+                "name: " + name +
+                ", id: " + id +
                 ", balance: " + balance +
                 ", annualInterestRate: " + annualInterestRate +
-                ", dateCreated: " + dateCreated;
+                ", dateCreated: " + dateCreated + transactions;
+    }
+
+    public void printTransactions() {
+
+        for(int i = 0 ; i < transactions.size() ; i++) {
+            System.out.println(transactions.get(i));
+        }
     }
 }
