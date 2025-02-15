@@ -35,11 +35,13 @@ public class Gym {
 
         if (!members.containsKey(memberId)) {
             System.out.println("Member Id not found.");
+            return;
         }
 
 
         if (!gymClasses.containsKey(className)) {
             System.out.println("Class not found.");
+            return;
         }
 
         gymClasses.get(className).enroll(members.get(memberId));
